@@ -5,6 +5,11 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { PagesComponent } from "./pages.component";
 import { SharedModule } from "../shared/shared.module";
 import { PAGES_ROUTES } from "./pages.routes";
+import { FormsModule } from "@angular/forms";
+import { IncrementadorComponent } from "../component/incrementador/incrementador.component";
+import { ChartsModule } from 'ng2-charts';
+import { GraficoDonaComponent } from "../component/grafico-dona/grafico-dona.component";
+
 
 
 
@@ -16,18 +21,23 @@ import { PAGES_ROUTES } from "./pages.routes";
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
-    PagesComponent
+    PagesComponent,
+    IncrementadorComponent,
+    GraficoDonaComponent
 
   ],
   exports:[
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
-    PagesComponent
+    PagesComponent,
+    IncrementadorComponent
   ],
   imports: [
     SharedModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    FormsModule,
+    ChartsModule
   ]
 })
 
