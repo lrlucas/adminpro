@@ -50,8 +50,7 @@ export class ModalUploadComponent implements OnInit {
     this._subirArchivoService.subirArchivo( this.imagenSubir, this._modalUploadService.tipo, this._modalUploadService.id )
       .then(resp => {
 
-        console.log(resp);
-
+        // Aqui se emite el valor que queremos mostrar
         this._modalUploadService.notificacion.emit(resp);
         this.cerrarModal();
 

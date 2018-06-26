@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImagenPipe implements PipeTransform {
 
   transform(img: any, tipo: any = 'usuario'): any {
-    
+
     let url =  URL_SERVICIOS + '/img';
     if (!img) {
       return url + '/usuarios/xxx';
@@ -32,8 +32,8 @@ export class ImagenPipe implements PipeTransform {
         console.log('Tipos de imagen no existe: usuarios,medicos,hospitales');
         url += '/usuarios/xxx';
     }
-    
-    
+
+
     return url;
   }
 
