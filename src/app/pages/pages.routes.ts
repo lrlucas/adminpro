@@ -6,24 +6,24 @@ import { Graficas1Component } from "./graficas1/graficas1.component";
 import { AccoutSettingsComponent } from "./accout-settings/accout-settings.component";
 import { PromesasComponent } from "./promesas/promesas.component";
 import { RxjsComponent } from "./rxjs/rxjs.component";
-import { LoginGuardGuard } from "../services/guards/login-guard.guard";
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from "./usuarios/usuarios.component";
 import { HospitalesComponent } from "./hospitales/hospitales.component";
 import { MedicosComponent } from "./medicos/medicos.component";
 import { MedicoComponent } from "./medicos/medico.component";
 import { BusquedaComponent } from "./busqueda/busqueda.component";
-import { AdminGuard } from "../services/service.index";
+import { AdminGuard, VerificaTokenGuard } from "../services/service.index";
 
 
 const PagesRoutes:Routes = [
 
-  {
-    path: '',
-    component: PagesComponent,
-    canActivate:[ LoginGuardGuard ],
-    children: [
-      { path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboar'} },
+
+          {
+            path: 'dashboard',
+            component: DashboardComponent,
+            canActivate: [ VerificaTokenGuard ],
+            data: { titulo: 'Dashboar' }
+          },
       { path: 'progress', component: ProgressComponent, data: {titulo: 'Progressbars'} },
       { path: 'graficas1', component: Graficas1Component, data: {titulo: 'Graficas'} },
       { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
@@ -42,8 +42,7 @@ const PagesRoutes:Routes = [
       { path: 'medicos', component: MedicosComponent, data: {titulo: 'Mantenimiento de Medicos'} },
       { path: 'medico/:id', component: MedicoComponent, data: {titulo: 'Actualizar Medico'} },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    ]
-  }
+
 
 ];
 
