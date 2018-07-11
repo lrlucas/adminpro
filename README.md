@@ -1,20 +1,23 @@
-# Adminpro
+# Proyecto Adminpro Anglar 5.1.0 Angular-Cli 1.6.4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+Este es un proyecto de Angular generado con la version de `@angular/cli 1.6.4`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para correr el servidor de desarrollo ejecutar el siguiente comando
 
-## Code scaffolding
+`ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Y navegar hacia la ruta `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Para hacer el build de la aplicacion ejecutar el siguiente comando
 
-## Running unit tests
+`ng build --prod -aot false`
+
+Se creara una nueva carpeta que se llama `dist` en la raiz del proyecto, ese es el proyecto en estado de produccion.
+<!-- ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
@@ -25,3 +28,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ -->
