@@ -1,4 +1,4 @@
-# Proyecto Adminpro Anglar 5.1.0 Angular-Cli 1.6.4
+# Proyecto Adminpro Angular 5.1.0 Angular-Cli 1.6.4
 
 Este es un proyecto de Angular generado con la version de `@angular/cli 1.6.4`
 
