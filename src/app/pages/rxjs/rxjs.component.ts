@@ -10,7 +10,7 @@ import 'rxjs/add/operator/filter';
   templateUrl: './rxjs.component.html',
   styles: []
 })
-export class RxjsComponent implements OnInit,OnDestroy {
+export class RxjsComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
 
@@ -18,7 +18,7 @@ export class RxjsComponent implements OnInit,OnDestroy {
 
     this.subscription = this.regresaObservable()
       .subscribe(
-        numero=> console.log('Subscripcion ' + numero),
+        numero => console.log(`Subscripcion ${ numero }` ),
         error => console.log('Error en el observador ' + error),
         ()=> console.log('El observador termino!')
       )
@@ -65,10 +65,10 @@ export class RxjsComponent implements OnInit,OnDestroy {
 
     })
       .retry(2)
-      .map((res:any)=>{
+      .map((res:any) => {
         return res.valor;
       })
-      .filter((valor,index)=>{
+      .filter((valor,index) => {
         if(valor % 2 === 1) {
           // Impar
           return true
