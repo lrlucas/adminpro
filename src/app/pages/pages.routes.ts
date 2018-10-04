@@ -18,12 +18,12 @@ import { AdminGuard, VerificaTokenGuard } from "../services/service.index";
 const PagesRoutes:Routes = [
 
 
-          {
-            path: 'dashboard',
-            component: DashboardComponent,
-            canActivate: [ VerificaTokenGuard ],
-            data: { titulo: 'Dashboar' }
-          },
+      {
+        path: 'dashboard',
+          component: DashboardComponent,
+          canActivate: [ VerificaTokenGuard ],
+          data: { titulo: 'Dashboar' }
+      },
       { path: 'progress', component: ProgressComponent, data: {titulo: 'Progressbars'} },
       { path: 'graficas1', component: Graficas1Component, data: {titulo: 'Graficas'} },
       { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },

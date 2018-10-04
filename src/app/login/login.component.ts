@@ -13,7 +13,7 @@ declare const gapi:any;
 })
 export class LoginComponent implements OnInit {
 
-  email:string;
+  email:string = 'test1@test.com'
   recuerdame:boolean = false;
   auth2:any;
 
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     init_plugins();
     this.googleInit();
 
-    this.email = localStorage.getItem('email') || '';
+    // this.email = localStorage.getItem('email') || '';
     if (this.email.length > 1) {
       this.recuerdame = true;
     }
